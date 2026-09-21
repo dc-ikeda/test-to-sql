@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "text2sql": {
+      "command": ".venv/Scripts/python.exe",
+      "args": ["-m", "mcp_server.server"]
+    }
+  }
+}

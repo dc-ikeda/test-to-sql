@@ -42,7 +42,7 @@ flowchart LR
 **1. Python 環境**
 
 ```powershell
-git clone https://github.com/dc-ikeda/test-to-sql.git
+git clone [url]
 cd test-to-sql
 python -m venv .venv
 .venv\Scripts\Activate.ps1

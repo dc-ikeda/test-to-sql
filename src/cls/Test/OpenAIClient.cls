@@ -3,7 +3,7 @@ Class Test.OpenAIClient
 {
 
 /// .envファイルのフルパス
-Parameter ENVFILE = "D:\Work\Git\text2sql\.env";
+Parameter ENVFILE = "\.env";
 
 /// 自然言語でのSQL実行テスト
 ClassMethod TestSQL(question as %String)

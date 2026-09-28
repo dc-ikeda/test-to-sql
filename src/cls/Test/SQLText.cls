@@ -4,7 +4,6 @@ Class Test.SQLText Extends %Projection.AbstractProjection
 {
 ClassMethod CreateProjection(cls As %String, ByRef params) As %Status
 {
-    // code here...
     q ..OutputSQLText(cls)
 }
 

@@ -9,7 +9,6 @@ import json
 
 from mcp.server.mcpserver import MCPServer
 
-from mcp_server.agent import run_agent
 from mcp_server.settings import load_settings
 
 mcp = MCPServer("text2sql")
@@ -54,6 +53,10 @@ def ask_database(question: str) -> dict:
     スキーマ取得・SQL生成・SQL実行までを内部で完結させ、
     自然文の回答に加えて、実際に実行された SQL 文と生の実行結果データを返す。
     """
+    # langchain 系の import は重く MCP のハンドシェイクタイムアウトを超えるため、
+    # サーバー起動時ではなくツール呼び出し時に遅延させる。
+    from mcp_server.agent import run_agent
+
     settings = load_settings()
     result = run_agent(settings, question)
     messages = result["messages"]
